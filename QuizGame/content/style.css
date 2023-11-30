@@ -1,0 +1,13 @@
+:root {
+    --bg-color: red;
+    --txt-color: white;
+    --btn-color: blue;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgba(0, 0, 0, 0.414);
+}
