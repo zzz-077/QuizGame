@@ -1,7 +1,8 @@
+/*https://colorswall.com/palette/42782*/
 :root {
-    --bg-color: red;
-    --txt-color: white;
-    --btn-color: blue;
+    --main_bg_color: #ab3cfc;
+    --txt_color: white;
+    --btn_color: #533b7c;
 }
 * {
     padding: 0;
@@ -9,5 +10,65 @@
     box-sizing: border-box;
 }
 body {
-    background-color: rgba(0, 0, 0, 0.414);
+    background-image: url(../img/desktop-wallpaper-quiz.png);
+    object-fit: cover;
+}
+button {
+    border: 0;
+    cursor: pointer;
+    outline: none;
+    color: white;
+}
+
+.startUp_content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 2rem;
+}
+.startUp_box {
+    margin: 0 auto;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--main_bg_color);
+    padding: 0.75rem 0;
+    border-radius: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+}
+.startUp_box .header {
+    font-size: 1.5rem;
+    padding: 0 0.75rem;
+}
+.startUp_box .top_content {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.25rem 0.75rem;
+    border-bottom: 1px solid black;
+}
+.startUp_box .top_content div {
+    display: flex;
+    gap: 2px;
+    align-items: center;
+    font-size: 1.1rem;
+}
+.startUp_box .top_content div:nth-child(2) i {
+    color: #ffd700;
+}
+.startUp_box .bottom_content {
+    margin-top: 1rem;
+}
+.startUp_box .bottom_content button {
+    width: 60%;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    background-color: var(--btn_color);
+    font-size: 1rem;
+    font-weight: 600;
 }
