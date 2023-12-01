@@ -2,7 +2,8 @@
 :root {
     --main_bg_color: #ab3cfc;
     --txt_color: white;
-    --btn_color: #533b7c;
+    --btn_color: #3e394c;
+    --gold_color: #daba07;
 }
 * {
     padding: 0;
@@ -12,63 +13,263 @@
 body {
     background-image: url(../img/desktop-wallpaper-quiz.png);
     object-fit: cover;
+    overflow: hidden;
 }
 button {
     border: 0;
     cursor: pointer;
     outline: none;
-    color: white;
+    color: var(--txt_color);
 }
 
-.startUp_content {
+.startUp {
     width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 0 2rem;
+    text-align: center;
+}
+.startUp_content {
+    position: relative;
+    transition: all 0.3s;
+    opacity: 1;
+    transform: translateY(0);
+}
+.startUp_content.active {
+    transform: translateY(-200%);
+    opacity: 0;
+}
+
+.startUp_content .logo_box {
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
 }
 .startUp_box {
     margin: 0 auto;
-    max-width: 400px;
+    max-width: 500px;
     display: flex;
     justify-content: center;
     background-color: var(--main_bg_color);
-    padding: 0.75rem 0;
+    padding: 2rem 0;
     border-radius: 0.25rem;
     display: flex;
     flex-direction: column;
     text-align: center;
-    color: white;
+    color: var(--txt_color);
+    position: relative;
 }
-.startUp_box .header {
-    font-size: 1.5rem;
-    padding: 0 0.75rem;
-}
+
 .startUp_box .top_content {
     display: flex;
     justify-content: center;
-    gap: 1rem;
-    padding: 1.25rem 0.75rem;
-    border-bottom: 1px solid black;
+    gap: 3rem;
+    margin-top: 1.25rem;
 }
 .startUp_box .top_content div {
     display: flex;
     gap: 2px;
     align-items: center;
-    font-size: 1.1rem;
+    font-size: 1.8rem;
 }
 .startUp_box .top_content div:nth-child(2) i {
-    color: #ffd700;
+    color: var(--gold_color);
+    font-size: 1.875rem;
 }
 .startUp_box .bottom_content {
-    margin-top: 1rem;
+    margin-top: 2rem;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .startUp_box .bottom_content button {
-    width: 60%;
-    padding: 0.5rem;
+    width: 80%;
+    padding: 0.75rem 0.5rem;
     border-radius: 0.2rem;
     background-color: var(--btn_color);
-    font-size: 1rem;
+    font-size: 1.75rem;
     font-weight: 600;
+    transition: all 0.3s;
+    animation: btn_animation infinite 0.9s;
+    position: relative;
+}
+.startUp_box .bottom_content button:hover {
+    background-color: var(--gold_color);
+}
+
+@keyframes btn_animation {
+    0% {
+        width: 80%;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+    }
+    50% {
+        width: 75%;
+        padding-top: 0.7rem;
+        padding-bottom: 0.7rem;
+    }
+    100% {
+        width: 80%;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+    }
+}
+
+/*=================================*/
+/*===========Game_board============*/
+/*=================================*/
+.container {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 2rem;
+    text-align: center;
+}
+.game_content {
+    height: 600px;
+    max-width: 900px;
+    border-radius: 0.25rem;
+    background-color: var(--main_bg_color);
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+.game_content {
+    position: relative;
+    transition: all 0.3s;
+    opacity: 0;
+    transform: translateY(-200%);
+}
+.game_content.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+.game_board {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+.time_box {
+    position: absolute;
+    top: 76%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--gold_color);
+    border-radius: 50%;
+    color: var(--txt_color);
+}
+
+.time_box h1 {
+    transition: all 0.3s;
+    font-size: 1.6rem;
+}
+.time_box h1::before,
+.time_box h1::after {
+    content: " ";
+    position: absolute;
+    width: 410px;
+    height: 1px;
+    background-color: var(--gold_color);
+    top: 50%;
+}
+
+.time_box h1::before {
+    left: -410px;
+}
+.time_box h1::after {
+    right: -410px;
+}
+.answers_board {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 0.5rem;
+    padding: 0 0.5rem;
+}
+.answers_board button {
+    width: 420px;
+    padding: 1rem 2rem;
+    background-color: var(--btn_color);
+    border-radius: 0.2rem;
+    text-align: left;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+.answers_board button:hover {
+    background-color: var(--gold_color);
+}
+.quiz_display_board {
+    width: 100%;
+    border-radius: 0.25rem;
+    padding: 0 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.quiz_display_board div {
+    background-color: var(--btn_color);
+    display: flex;
+    padding: 0 0.5rem;
+    justify-content: center;
+    align-items: center;
+    color: var(--txt_color);
+    font-size: 1.75rem;
+    border-radius: 0.25rem;
+    height: 100%;
+}
+
+.game_static {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    color: var(--txt_color);
+    font-size: 1.25rem;
+    padding: 0 1rem;
+}
+.game_static div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.progress_bar {
+    width: 80%;
+    background-color: var(--txt_color);
+    height: 14px;
+    border-radius: 0.25rem;
+    overflow: hidden;
+}
+.progress_bar .bar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    background-color: var(--gold_color);
+    height: 14px;
+    margin-right: auto;
+    transition: all 0.3s;
+}
+
+.game_static div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    gap: 0.2rem;
+    align-items: center;
 }

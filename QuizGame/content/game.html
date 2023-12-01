@@ -3,10 +3,53 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Quiz Game</title>
         <link rel="stylesheet" href="style.css" />
+        <script
+            src="https://kit.fontawesome.com/47912b74b2.js"
+            crossorigin="anonymous"
+        ></script>
     </head>
-    <body>
-        <h1>HEllo</h1>
+    <body id="game_board">
+        <section class="container">
+            <div class="game_content">
+                <div class="game_board">
+                    <div class="time_box">
+                        <h1>17</h1>
+                    </div>
+                    <div class="game_static">
+                        <div>
+                            <h1>15s</h1>
+                            <div class="progress_bar">
+                                <div class="bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quiz_display_board">
+                        <div>
+                            <p>
+                                "Neither the teacher nor the students were aware
+                                that the test has been postponed."
+                            </p>
+                        </div>
+                    </div>
+                    <div class="answers_board">
+                        <div>
+                            <button>A)Neither</button>
+                        </div>
+                        <div>
+                            <button>B)Nor</button>
+                        </div>
+                        <div>
+                            <button>C)Were</button>
+                        </div>
+                        <div>
+                            <button>D)Has been</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="app.js" defer></script>
     </body>
 </html>
