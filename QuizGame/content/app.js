@@ -43,10 +43,61 @@ switch (page) {
         }
         break;
     case "game_board":
+        const text = document.querySelector(".quiz_display_board div p");
+        const ansBtn1 = document.querySelector("#ansBtn1");
+        const ansBtn2 = document.querySelector("#ansBtn2");
+        const ansBtn3 = document.querySelector("#ansBtn3");
+        const ansBtn4 = document.querySelector("#ansBtn4");
+
         setTimeout(() => {
             gamePageLoad();
         }, 300);
         progresBarFunc();
+        fetch("../Data/data.json")
+            .then((res) => {
+                return res.json();
+            })
+            .then((obj) => {
+                let randNum;
+                let findItem;
+                let ItemsArr = [];
+                function RandomFunc() {
+                    randNum = Math.floor(Math.random() * 20 + 1);
+                    return randNum;
+                }
+                console.log(RandomFunc());
 
+                function findItemFunc() {
+                    findItem = obj.find((item) => {
+                        return item.id === randNum;
+                    });
+                    return {
+                        text: findItem.text,
+                        ansA: findItem.answerA,
+                        ansB: findItem.answerB,
+                        ansC: findItem.answerC,
+                        ansD: findItem.answerD,
+                        corrAns: findItem.correctAnswer,
+                    };
+                }
+
+                function addingClassList() {
+                    let result = findItemFunc();
+                    console.log(result.corrAns);
+                    let CorrAns;
+                    ansBtn1,
+                        ansBtn2,
+                        ansBtn3,
+                        ansBtn4.classList.add("ans_btns");
+                    text.classList.add("quiz_text_content");
+
+                    text.innerHTML = result.text;
+                    ansBtn1.innerHTML = result.ansA;
+                    ansBtn2.innerHTML = result.ansB;
+                    ansBtn3.innerHTML = result.ansC;
+                    ansBtn4.innerHTML = result.ansD;
+                }
+                addingClassList();
+            });
         break;
 }

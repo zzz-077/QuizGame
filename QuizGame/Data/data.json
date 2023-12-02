@@ -1,1 +1,182 @@
-[{}]
+[
+    {
+        "id": 1,
+        "text": "The party was a lot of fun, but it ended __________ midnight.",
+        "answerA": "A) on",
+        "answerB": "B) in",
+        "answerC": "C) at",
+        "answerD": "D) by",
+        "correctAnswer": "C) at"
+    },
+    {
+        "id": 2,
+        "text": "I need to buy some __________ for my new apartment.",
+        "answerA": "A) furniture",
+        "answerB": "B) food",
+        "answerC": "C) information",
+        "answerD": "D) time",
+        "correctAnswer": "A) furniture"
+    },
+    {
+        "id": 3,
+        "text": "The concert was so __________ that everyone gave a standing ovation.",
+        "answerA": "A) bad",
+        "answerB": "B) loud",
+        "answerC": "C) short",
+        "answerD": "D) good",
+        "correctAnswer": "D) good"
+    },
+    {
+        "id": 4,
+        "text": "I'll be happy to help you with your homework __________ I finish my own.",
+        "answerA": "A) while",
+        "answerB": "B) since",
+        "answerC": "C) because",
+        "answerD": "D) after",
+        "correctAnswer": "D) after"
+    },
+    {
+        "id": 5,
+        "text": "The cat jumped onto the table and knocked __________ my coffee.",
+        "answerA": "A) on",
+        "answerB": "B) over",
+        "answerC": "C) up",
+        "answerD": "D) off",
+        "correctAnswer": "B) over"
+    },
+    {
+        "id": 6,
+        "text": "It's important to have a good balance between work and __________.",
+        "answerA": "A) pleasure",
+        "answerB": "B) effort",
+        "answerC": "C) trouble",
+        "answerD": "D) success",
+        "correctAnswer": "A) pleasure"
+    },
+    {
+        "id": 7,
+        "text": "She always takes __________ sugar in her tea.",
+        "answerA": "A) much",
+        "answerB": "B) many",
+        "answerC": "C) few",
+        "answerD": "D) little",
+        "correctAnswer": "D) little"
+    },
+    {
+        "id": 8,
+        "text": "I have a meeting with my boss __________ 3 o'clock this afternoon.",
+        "answerA": "A) in",
+        "answerB": "B) on",
+        "answerC": "C) at",
+        "answerD": "D) by",
+        "correctAnswer": "A) in"
+    },
+    {
+        "id": 9,
+        "text": "The movie was so __________ that I fell asleep halfway through.",
+        "answerA": "A) interesting",
+        "answerB": "B) boring",
+        "answerC": "C) exciting",
+        "answerD": "D) frightening",
+        "correctAnswer": "B) boring"
+    },
+    {
+        "id": 10,
+        "text": "I prefer to eat fruit __________ chocolate for dessert.",
+        "answerA": "A) instead of",
+        "answerB": "B) because of",
+        "answerC": "C) besides",
+        "answerD": "D) in spite of",
+        "correctAnswer": "A) instead of"
+    },
+    {
+        "id": 11,
+        "text": "After the heavy rain, the streets were filled __________ water.",
+        "answerA": "A) of",
+        "answerB": "B) with",
+        "answerC": "C) by",
+        "answerD": "D) under",
+        "correctAnswer": "B) with"
+    },
+    {
+        "id": 12,
+        "text": "I can't find my keys anywhere. I've looked __________ the house.",
+        "answerA": "A) at",
+        "answerB": "B) on",
+        "answerC": "C) around",
+        "answerD": "D) into",
+        "correctAnswer": "C) around"
+    },
+    {
+        "id": 13,
+        "text": "The children were __________ when they heard about the trip to Disneyland.",
+        "answerA": "A) sad",
+        "answerB": "B) angry",
+        "answerC": "C) happy",
+        "answerD": "D) afraid",
+        "correctAnswer": "C) happy"
+    },
+    {
+        "id": 14,
+        "text": "I'm sorry I'm late. I got stuck __________ traffic.",
+        "answerA": "A) at",
+        "answerB": "B) by",
+        "answerC": "C) in",
+        "answerD": "D) with",
+        "correctAnswer": "C) in"
+    },
+    {
+        "id": 15,
+        "text": "She was too __________ to speak in front of the large audience.",
+        "answerA": "A) brave",
+        "answerB": "B) shy",
+        "answerC": "C) smart",
+        "answerD": "D) loud",
+        "correctAnswer": "B) shy"
+    },
+    {
+        "id": 16,
+        "text": "I don't have __________ time to finish this project before the deadline.",
+        "answerA": "A) much",
+        "answerB": "B) many",
+        "answerC": "C) few",
+        "answerD": "D) little",
+        "correctAnswer": "A) much"
+    },
+    {
+        "id": 17,
+        "text": "The chef added a pinch of __________ to enhance the flavor of the dish.",
+        "answerA": "A) salt",
+        "answerB": "B) sugar",
+        "answerC": "C) pepper",
+        "answerD": "D) chili",
+        "correctAnswer": "C) pepper"
+    },
+    {
+        "id": 18,
+        "text": "She is allergic __________ seafood, so she can't eat shrimp or crab.",
+        "answerA": "A) to",
+        "answerB": "B) for",
+        "answerC": "C) with",
+        "answerD": "D) by",
+        "correctAnswer": "A) to"
+    },
+    {
+        "id": 19,
+        "text": "I can't decide __________ to buy the blue shirt or the red one.",
+        "answerA": "A) if",
+        "answerB": "B) whether",
+        "answerC": "C) either",
+        "answerD": "D) nor",
+        "correctAnswer": "B) whether"
+    },
+    {
+        "id": 20,
+        "text": "We should exercise regularly to maintain good __________.",
+        "answerA": "A) health",
+        "answerB": "B) wealth",
+        "answerC": "C) luck",
+        "answerD": "D) joy",
+        "correctAnswer": "A) health"
+    }
+]

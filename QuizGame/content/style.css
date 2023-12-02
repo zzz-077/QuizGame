@@ -201,7 +201,7 @@ button {
     gap: 0.5rem;
     padding: 0 0.5rem;
 }
-.answers_board button {
+.ans_btns {
     width: 420px;
     padding: 1rem 2rem;
     background-color: var(--btn_color);
@@ -210,7 +210,7 @@ button {
     font-size: 1rem;
     transition: all 0.3s;
 }
-.answers_board button:hover {
+.ans_btns:hover {
     background-color: var(--gold_color);
 }
 .quiz_display_board {
@@ -223,7 +223,7 @@ button {
     height: 100%;
 }
 
-.quiz_display_board div {
+.quiz_text_content {
     background-color: var(--btn_color);
     display: flex;
     padding: 0 0.5rem;
