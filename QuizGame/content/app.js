@@ -32,6 +32,7 @@ function progresBarFunc() {
         }
     }, 100);
 }
+
 switch (page) {
     case "main_board":
         startUp_btn.addEventListener("click", startClick);
@@ -48,6 +49,9 @@ switch (page) {
         const ansBtn2 = document.querySelector("#ansBtn2");
         const ansBtn3 = document.querySelector("#ansBtn3");
         const ansBtn4 = document.querySelector("#ansBtn4");
+        const ans_btns = document.querySelectorAll(".ans_btns");
+
+        let AnswerIndex;
 
         setTimeout(() => {
             gamePageLoad();
@@ -60,44 +64,76 @@ switch (page) {
             .then((obj) => {
                 let randNum;
                 let findItem;
-                let ItemsArr = [];
-                function RandomFunc() {
-                    randNum = Math.floor(Math.random() * 20 + 1);
-                    return randNum;
-                }
-                console.log(RandomFunc());
+                let corrNum;
+                const usedNumbersArr = [];
+                function returnAgain() {
+                    function RandomFunc() {
+                        do {
+                            randNum = Math.floor(Math.random() * 20 + 1);
+                        } while (usedNumbersArr.includes(randNum));
+                        usedNumbersArr.push(randNum);
+                        if (usedNumbersArr === 20) {
+                            usedNumbersArr.length = 0;
+                            usedNumbersArr.push(randNum);
+                        }
+                        return randNum;
+                    }
+                    console.log(RandomFunc());
 
-                function findItemFunc() {
-                    findItem = obj.find((item) => {
-                        return item.id === randNum;
+                    function findItemFunc() {
+                        findItem = obj.find((item) => {
+                            return item.id === randNum;
+                        });
+                        return {
+                            text: findItem.text,
+                            ansA: findItem.answerA,
+                            ansB: findItem.answerB,
+                            ansC: findItem.answerC,
+                            ansD: findItem.answerD,
+                            corrAns: findItem.correctAnswer,
+                        };
+                    }
+
+                    function addingClassList() {
+                        let result = findItemFunc();
+                        corrNum = result.corrAns;
+                        ansBtn1,
+                            ansBtn2,
+                            ansBtn3,
+                            ansBtn4.classList.add("ans_btns");
+                        text.classList.add("quiz_text_content");
+
+                        text.innerHTML = result.text;
+                        ansBtn1.innerHTML = result.ansA;
+                        ansBtn2.innerHTML = result.ansB;
+                        ansBtn3.innerHTML = result.ansC;
+                        ansBtn4.innerHTML = result.ansD;
+                    }
+                    addingClassList();
+                }
+                returnAgain();
+                ans_btns.forEach((btn, index) => {
+                    btn.addEventListener("click", () => {
+                        AnswerIndex = index + 1;
+                        compare();
                     });
-                    return {
-                        text: findItem.text,
-                        ansA: findItem.answerA,
-                        ansB: findItem.answerB,
-                        ansC: findItem.answerC,
-                        ansD: findItem.answerD,
-                        corrAns: findItem.correctAnswer,
-                    };
-                }
+                });
 
-                function addingClassList() {
-                    let result = findItemFunc();
-                    console.log(result.corrAns);
-                    let CorrAns;
-                    ansBtn1,
-                        ansBtn2,
-                        ansBtn3,
-                        ansBtn4.classList.add("ans_btns");
-                    text.classList.add("quiz_text_content");
-
-                    text.innerHTML = result.text;
-                    ansBtn1.innerHTML = result.ansA;
-                    ansBtn2.innerHTML = result.ansB;
-                    ansBtn3.innerHTML = result.ansC;
-                    ansBtn4.innerHTML = result.ansD;
+                function compare() {
+                    let correctReturnedAns = corrNum;
+                    if (AnswerIndex == correctReturnedAns) {
+                        console.log("=====correct======");
+                        console.log("AnswerIndex:" + AnswerIndex);
+                        console.log("correctReturnedAns:" + correctReturnedAns);
+                        return returnAgain();
+                    } else {
+                        console.log("=====incorrect======");
+                        console.log("AnswerIndex:" + AnswerIndex);
+                        console.log("correctReturnedAns:" + correctReturnedAns);
+                        return alert("Game ended try Again!");
+                    }
                 }
-                addingClassList();
             });
+
         break;
 }

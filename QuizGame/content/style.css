@@ -159,7 +159,7 @@ button {
     position: relative;
     overflow: hidden;
 }
-.time_box {
+.score_box {
     position: absolute;
     top: 76%;
     left: 50%;
@@ -175,12 +175,12 @@ button {
     color: var(--txt_color);
 }
 
-.time_box h1 {
+.score_box h1 {
     transition: all 0.3s;
     font-size: 1.6rem;
 }
-.time_box h1::before,
-.time_box h1::after {
+.score_box h1::before,
+.score_box h1::after {
     content: " ";
     position: absolute;
     width: 410px;
@@ -189,10 +189,10 @@ button {
     top: 50%;
 }
 
-.time_box h1::before {
+.score_box h1::before {
     left: -410px;
 }
-.time_box h1::after {
+.score_box h1::after {
     right: -410px;
 }
 .answers_board {
@@ -253,7 +253,7 @@ button {
     width: 80%;
     background-color: var(--txt_color);
     height: 14px;
-    border-radius: 0.25rem;
+    border-radius: 0.5rem;
     overflow: hidden;
 }
 .progress_bar .bar {
