@@ -56,7 +56,7 @@ button {
     justify-content: center;
     background-color: var(--main_bg_color);
     padding: 2rem 0;
-    border-radius: 0.25rem;
+    border-radius: 0.75rem;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -67,16 +67,19 @@ button {
 .startUp_box .top_content {
     display: flex;
     justify-content: center;
-    gap: 3rem;
     margin-top: 1.25rem;
 }
-.startUp_box .top_content div {
+.startUp_box .top_content .max_score {
     display: flex;
     gap: 2px;
     align-items: center;
     font-size: 1.8rem;
 }
-.startUp_box .top_content div:nth-child(2) i {
+.startUp_box .top_content .max_score h2 {
+    font-size: 2.25rem;
+    margin-right: 5px;
+}
+.startUp_box .top_content .max_score i {
     color: var(--gold_color);
     font-size: 1.875rem;
 }
@@ -135,7 +138,7 @@ button {
 .game_content {
     height: 600px;
     max-width: 900px;
-    border-radius: 0.25rem;
+    border-radius: 0.75rem;
     background-color: var(--main_bg_color);
     margin: 0 auto;
     padding: 1rem 0;
@@ -272,4 +275,109 @@ button {
     justify-content: center;
     gap: 0.2rem;
     align-items: center;
+}
+/*===========================*/
+.lose_box {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.229);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    transition: all 0.3s;
+    opacity: 0;
+    z-index: -1;
+}
+.lose_box.active {
+    z-index: 10;
+    opacity: 1;
+}
+
+.lose_content {
+    max-width: 600px;
+    background-color: var(--main_bg_color);
+    border-radius: 0.75rem;
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s;
+    opacity: 0;
+    transform: translateY(-200%);
+}
+.lose_content.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+.lose_content .lose_header {
+    padding: 0.5rem 5rem 0 5rem;
+    font-size: 1.25rem;
+    margin-top: 2.25rem;
+}
+
+.lose_content .logo_box {
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+}
+.logo_box img {
+    width: 100%;
+    object-fit: cover;
+}
+.lose_content .lose_score {
+    padding: 0 2rem;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.lose_content .lose_score div {
+    width: 80%;
+    background-color: #643d80;
+    border-radius: 1.25rem;
+    margin-top: 0.5rem;
+    color: #ffd900;
+}
+.lose_content .lose_score div strong {
+    font-size: 2rem;
+    width: 100%;
+}
+.lose_content .lose_retry_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0.5rem;
+    height: 68px;
+}
+.lose_content .lose_retry_button button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.25rem;
+    transition: all 0.5s;
+    color: var(--txt_color);
+    background-color: var(--btn_color);
+}
+.lose_content .lose_retry_button button:hover {
+    width: 180px;
+    height: 50px;
+    border-radius: 0.875rem;
+    background-color: var(--gold_color);
+}
+.lose_content .lose_retry_button button i {
+    transition: all 0.5s;
+    transform: rotateZ(-90deg);
+}
+.lose_content .lose_retry_button button:hover i {
+    transform: rotateZ(90deg);
 }
