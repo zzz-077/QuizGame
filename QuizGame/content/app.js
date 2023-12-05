@@ -18,9 +18,11 @@ const LiveScore_box = document.querySelector(".score_box h1");
 const AlertScore_box = document.querySelector(".lose_score div strong");
 const MenuMax_score = document.querySelector(".max_score h3");
 let InagamePage;
-let width = 15 * 100;
+let width = 16 * 100;
+let IntervalX;
 let score = 0;
 let Maxscore = 0;
+timeCheck = false;
 
 document.addEventListener("DOMContentLoaded", () => {
     Maxscore = parseInt(localStorage.getItem("Maxscore")) || 0;
@@ -30,14 +32,15 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function progresBarFunc() {
-    let IntervalX = setInterval(() => {
+    IntervalX = setInterval(() => {
         if (width == 0) {
-            console.log("stopped");
+            timeCheck = true;
+            timeLimitFunc();
             clearInterval(IntervalX);
         } else {
             width -= 10;
             progresBarH1.innerHTML = Math.floor(width / 100) + "s";
-            progressBar.style.width = (width / 100) * 6.6666666667 + "%";
+            progressBar.style.width = (width / 100) * 6.25 + "%";
             if (width == 500) {
                 progresBarH1.style.color = "rgb(244, 42, 42)";
                 progressBar.style.backgroundColor = "rgb(244, 42, 42)";
@@ -61,6 +64,18 @@ function gamePageLoad() {
 }
 function gamePageLoadRemove() {
     game_content.classList.remove("active");
+}
+
+function timeLimitFunc() {
+    if (timeCheck == true) {
+        AlertScore_box.innerHTML = score;
+        setTimeout(() => {
+            gamePageLoadRemove();
+        }, 100);
+
+        lose_box.classList.add("active");
+        lose_content.classList.add("active");
+    }
 }
 
 switch (page) {
@@ -91,7 +106,7 @@ switch (page) {
         setTimeout(() => {
             gamePageLoad();
         }, 300);
-        progresBarFunc();
+
         function startGame() {
             fetch("../Data/data.json")
                 .then((res) => {
@@ -102,13 +117,17 @@ switch (page) {
                     let findItem;
                     let corrNum;
                     const usedNumbersArr = [];
+
                     function returnAgain() {
+                        progresBarFunc();
                         function RandomFunc() {
                             do {
-                                randNum = Math.floor(Math.random() * 20 + 1);
+                                randNum = Math.floor(
+                                    Math.random() * obj.length + 1
+                                );
                             } while (usedNumbersArr.includes(randNum));
                             usedNumbersArr.push(randNum);
-                            if (usedNumbersArr === 20) {
+                            if (usedNumbersArr === obj.length) {
                                 usedNumbersArr.length = 0;
                                 usedNumbersArr.push(randNum);
                             }
@@ -154,24 +173,21 @@ switch (page) {
                             compare();
                         });
                     });
-
                     function compare() {
                         let correctReturnedAns = corrNum;
                         if (AnswerIndex == correctReturnedAns) {
-                            // console.log("=====correct======");
-                            // console.log("AnswerIndex:" + AnswerIndex);
-                            // console.log(
-                            //     "correctReturnedAns:" + correctReturnedAns
-                            // );
                             score += 1;
                             LiveScore_box.innerHTML = score;
+                            width = 16 * 100;
+                            progresBarH1.innerHTML = 16 + "s";
+                            progressBar.style.width = 100 + "%";
+                            progresBarH1.style.color = "white";
+                            progressBar.style.backgroundColor =
+                                "rgba(217, 186, 8, 1)";
+                            clearInterval(IntervalX);
+
                             return returnAgain();
                         } else {
-                            // console.log("=====incorrect======");
-                            // console.log("AnswerIndex:" + AnswerIndex);
-                            // console.log(
-                            //     "correctReturnedAns:" + correctReturnedAns
-                            // );
                             AlertScore_box.innerHTML = score;
                             setTimeout(() => {
                                 gamePageLoadRemove();

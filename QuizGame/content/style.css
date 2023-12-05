@@ -48,7 +48,10 @@ button {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
+    outline: none;
+    user-select: none;
 }
+
 .startUp_box {
     margin: 0 auto;
     max-width: 500px;
@@ -270,12 +273,6 @@ button {
     transition: all 0.3s;
 }
 
-.game_static div:nth-child(2) {
-    display: flex;
-    justify-content: center;
-    gap: 0.2rem;
-    align-items: center;
-}
 /*===========================*/
 .lose_box {
     position: absolute;
