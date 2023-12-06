@@ -240,7 +240,6 @@ switch (page) {
                             }
                             return randNum;
                         }
-                        console.log(RandomFunc());
 
                         function findItemFunc() {
                             findItem = obj.find((item) => {
