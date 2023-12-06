@@ -178,5 +178,185 @@
         "answerC": "C) luck",
         "answerD": "D) joy",
         "correctAnswer": 1
+    },
+    {
+        "id": 21,
+        "text": "The __________ is the largest mammal on Earth.",
+        "answerA": "A) Elephant",
+        "answerB": "B) Giraffe",
+        "answerC": "C) Blue whale",
+        "answerD": "D) Lion",
+        "correctAnswer": 3
+    },
+    {
+        "id": 22,
+        "text": "I can't find my glasses. Have you seen them __________?",
+        "answerA": "A) recently",
+        "answerB": "B) yet",
+        "answerC": "C) already",
+        "answerD": "D) since",
+        "correctAnswer": 2
+    },
+    {
+        "id": 23,
+        "text": "The __________ of the new movie was disappointing, but the acting was excellent.",
+        "answerA": "A) plot",
+        "answerB": "B) setting",
+        "answerC": "C) characters",
+        "answerD": "D) genre",
+        "correctAnswer": 1
+    },
+    {
+        "id": 24,
+        "text": "After a long day at work, I like to __________ with a good book.",
+        "answerA": "A) celebrate",
+        "answerB": "B) relax",
+        "answerC": "C) exercise",
+        "answerD": "D) study",
+        "correctAnswer": 2
+    },
+    {
+        "id": 25,
+        "text": "The __________ of the cake filled the entire kitchen.",
+        "answerA": "A) color",
+        "answerB": "B) smell",
+        "answerC": "C) taste",
+        "answerD": "D) shape",
+        "correctAnswer": 2
+    },
+    {
+        "id": 26,
+        "text": "My favorite __________ is jazz because it soothes my mind.",
+        "answerA": "A) genre",
+        "answerB": "B) instrument",
+        "answerC": "C) artist",
+        "answerD": "D) album",
+        "correctAnswer": 1
+    },
+    {
+        "id": 27,
+        "text": "She __________ her keys at home and couldn't unlock the door.",
+        "answerA": "A) forgot",
+        "answerB": "B) remembered",
+        "answerC": "C) lost",
+        "answerD": "D) found",
+        "correctAnswer": 1
+    },
+    {
+        "id": 28,
+        "text": "I love to travel and experience different __________ and cultures.",
+        "answerA": "A) languages",
+        "answerB": "B) foods",
+        "answerC": "C) countries",
+        "answerD": "D) people",
+        "correctAnswer": 3
+    },
+    {
+        "id": 29,
+        "text": "She __________ the door quietly so as not to wake up the baby.",
+        "answerA": "A) opened",
+        "answerB": "B) closed",
+        "answerC": "C) slammed",
+        "answerD": "D) locked",
+        "correctAnswer": 1
+    },
+    {
+        "id": 30,
+        "text": "The __________ of the mountain range was breathtaking.",
+        "answerA": "A) height",
+        "answerB": "B) depth",
+        "answerC": "C) width",
+        "answerD": "D) beauty",
+        "correctAnswer": "D)beauty"
+    },
+    {
+        "id": 31,
+        "text": "I always __________ a jacket when it's cold outside.",
+        "answerA": "A) wear",
+        "answerB": "B) wearing",
+        "answerC": "C) wore",
+        "answerD": "D) worn",
+        "correctAnswer": 1
+    },
+    {
+        "id": 32,
+        "text": "The __________ in the room was so quiet you could hear a pin drop.",
+        "answerA": "A) atmosphere",
+        "answerB": "B) temperature",
+        "answerC": "C) humidity",
+        "answerD": "D) silence",
+        "correctAnswer": "D)silence"
+    },
+    {
+        "id": 33,
+        "text": "She __________ her room every weekend to keep it neat and organized.",
+        "answerA": "A) cleaning",
+        "answerB": "B) cleans",
+        "answerC": "C) cleaned",
+        "answerD": "D) clean",
+        "correctAnswer": 2
+    },
+    {
+        "id": 34,
+        "text": "The train was delayed, so we had to wait on the platform for an __________ hour.",
+        "answerA": "A) additional",
+        "answerB": "B) extra",
+        "answerC": "C) extended",
+        "answerD": "D) increased",
+        "correctAnswer": 2
+    },
+    {
+        "id": 35,
+        "text": "I like to start my day with a healthy __________ such as fruits or yogurt.",
+        "answerA": "A) dinner",
+        "answerB": "B) snack",
+        "answerC": "C) breakfast",
+        "answerD": "D) lunch",
+        "correctAnswer": 3
+    },
+    {
+        "id": 36,
+        "text": "She __________ her homework before going to bed.",
+        "answerA": "A) completed",
+        "answerB": "B) completes",
+        "answerC": "C) completing",
+        "answerD": "D) complete",
+        "correctAnswer": 1
+    },
+    {
+        "id": 37,
+        "text": "I need to buy a __________ of shoes for the wedding.",
+        "answerA": "A) pair",
+        "answerB": "B) set",
+        "answerC": "C) group",
+        "answerD": "D) collection",
+        "correctAnswer": 1
+    },
+    {
+        "id": 38,
+        "text": "The __________ in the library is extensive, with books on various topics.",
+        "answerA": "A) selection",
+        "answerB": "B) choice",
+        "answerC": "C) range",
+        "answerD": "D) catalog",
+        "correctAnswer": 1
+    },
+    {
+        "id": 39,
+        "text": "He __________ the news with great excitement and joy.",
+        "answerA": "A) received",
+        "answerB": "B) receiving",
+        "answerC": "C) receives",
+        "answerD": "D) receive",
+        "correctAnswer": 1
+    },
+    {
+        "id": 40,
+        "text": "I usually __________ my friends on weekends for a movie or dinner.",
+        "answerA": "A) meeting",
+        "answerB": "B) meet",
+        "answerC": "C) met",
+        "answerD": "D) meets",
+        "correctAnswer": 2
     }
 ]
