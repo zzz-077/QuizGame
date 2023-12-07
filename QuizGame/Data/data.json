@@ -267,7 +267,7 @@
         "answerB": "B) depth",
         "answerC": "C) width",
         "answerD": "D) beauty",
-        "correctAnswer": "D)beauty"
+        "correctAnswer": 4
     },
     {
         "id": 31,
@@ -285,7 +285,7 @@
         "answerB": "B) temperature",
         "answerC": "C) humidity",
         "answerD": "D) silence",
-        "correctAnswer": "D)silence"
+        "correctAnswer": 4
     },
     {
         "id": 33,

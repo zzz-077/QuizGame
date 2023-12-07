@@ -94,7 +94,6 @@ function playInGameMusic() {
         },
         false
     );
-
     ingameSound.play();
 }
 function playInGameMusicStop() {
@@ -111,15 +110,13 @@ function CorrectAnswer() {
     CorrectAns = new Audio("../Sounds/CorrectAnswersound.mp3");
     CorrectAns.play();
 }
+window.addEventListener("DOMContentLoaded", (event) => {
+    const audio = document.querySelector("audio");
+    audio.volume = 0.2;
+    audio.play();
+});
 
-// window.addEventListener("DOMContentLoaded", (event) => {
-//     const audio = document.querySelector("audio");
-//     audio.volume = 0.2;
-//     audio.play();
-// });
-
-// document.addEventListener("DOMContentLoaded", () => {
-// });
+document.addEventListener("DOMContentLoaded", () => {});
 //===================================
 //==========PROGRESSBAR==============
 //===================================
@@ -186,7 +183,6 @@ function gamePageLoadRemove() {
 
 switch (page) {
     case "main_board":
-        playMainMusic();
         startUp_btn.addEventListener("click", startClick);
         function startClick() {
             startUp_content.classList.add("active");
@@ -194,6 +190,7 @@ switch (page) {
                 changelocToGame();
             }, 300);
         }
+        playMainMusic();
         break;
     case "game_board":
         playInGameMusic();
@@ -240,6 +237,7 @@ switch (page) {
                             }
                             return randNum;
                         }
+                        console.log(RandomFunc());
 
                         function findItemFunc() {
                             findItem = obj.find((item) => {
@@ -254,7 +252,6 @@ switch (page) {
                                 corrAns: findItem.correctAnswer,
                             };
                         }
-
                         function addingClassList() {
                             let result = findItemFunc();
                             corrNum = result.corrAns;
