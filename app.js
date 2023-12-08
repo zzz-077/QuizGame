@@ -68,6 +68,7 @@ window.onmousemove = (e) => {
 //=====================================
 //==========SOUND EFFECTS==============
 //=====================================
+
 function playMainMusic() {
     lobbySound = new Audio("/Sounds/mainsound.mp3");
     lobbySound.volume = 0.2;
@@ -150,6 +151,7 @@ function timeLimitFunc() {
         lose_content.classList.add("active");
     }
 }
+
 //===================================
 //==========LOCALSTORAGE=============
 //===================================

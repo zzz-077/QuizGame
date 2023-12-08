@@ -41,15 +41,23 @@ button {
     transform: translateY(-200%);
     opacity: 0;
 }
-
 .startUp_content .logo_box {
+    width: 100%;
+    position: relative;
+    background-color: red;
+}
+.startUp_content .logo_box div {
+    width: 350px;
     position: absolute;
-    top: -30%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -70%);
     z-index: 1;
     outline: none;
     user-select: none;
+}
+.startUp_content .logo_box img {
+    width: 100%;
+    object-fit: cover;
 }
 
 .startUp_box {
@@ -70,6 +78,7 @@ button {
 .startUp_box .top_content {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 1.25rem;
 }
 .startUp_box .top_content .max_score {
@@ -78,7 +87,7 @@ button {
     align-items: center;
     font-size: 1.8rem;
 }
-.startUp_box .top_content .max_score h2 {
+.startUp_box .top_content h2 {
     font-size: 2.25rem;
     margin-right: 5px;
 }
@@ -206,6 +215,9 @@ button {
     grid-template-columns: auto auto;
     gap: 0.5rem;
     padding: 0 0.5rem;
+}
+.answers_board div {
+    padding: 0 10px;
 }
 .ans_btns {
     width: 420px;
@@ -387,4 +399,85 @@ button {
     pointer-events: none;
     color: #0fa2a9;
     font-size: 6px;
+}
+
+@media (max-width: 430px) {
+    .lose_content .lose_header {
+        padding: 0.5rem 2rem 0 2rem;
+        font-size: 1.2rem;
+        margin-top: 2.25rem;
+    }
+    .lose_content {
+        width: 100%;
+    }
+}
+@media (max-width: 400px) {
+    .container,
+    .lose_box,
+    .startUp {
+        padding: 0 1rem;
+    }
+    .startUp_content .logo_box div {
+        width: 230px;
+    }
+    .startUp_box .top_content .max_score {
+        font-size: 1.4rem;
+    }
+    .startUp_box .top_content h2 {
+        font-size: 1.875rem;
+        margin-right: 5px;
+    }
+    .startUp_box .top_content .max_score i {
+        color: var(--gold_color);
+        font-size: 1.4rem;
+    }
+    .startUp_box .bottom_content button {
+        font-size: 1rem;
+    }
+    .startUp_box .bottom_content {
+        margin-top: 0.75rem;
+    }
+}
+@media (max-width: 380px) {
+    .startUp_content .logo_box div {
+        width: 180px;
+        transform: translate(-50%, -60%);
+    }
+    .top_content {
+        flex-direction: column;
+    }
+}
+
+/*=========gameMedia========*/
+
+@media (max-width: 965px) {
+    .ans_btns {
+        width: 300px;
+    }
+    .score_box h1::before,
+    .score_box h1::after {
+        content: " ";
+        position: absolute;
+        width: 0;
+        height: 0;
+    }
+}
+@media (max-width: 725px) {
+    .answers_board {
+        display: flex;
+        flex-direction: column;
+    }
+    .ans_btns {
+        width: 100%;
+    }
+    .score_box {
+        top: 56%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+@media (max-width: 590px) {
+    .quiz_text_content p {
+        font-size: 1.25rem;
+    }
 }
