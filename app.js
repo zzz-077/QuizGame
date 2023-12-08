@@ -69,7 +69,7 @@ window.onmousemove = (e) => {
 //==========SOUND EFFECTS==============
 //=====================================
 function playMainMusic() {
-    lobbySound = new Audio("../Sounds/mainsound.mp3");
+    lobbySound = new Audio("/Sounds/mainsound.mp3");
     lobbySound.volume = 0.2;
 
     lobbySound.addEventListener(
@@ -83,7 +83,7 @@ function playMainMusic() {
     lobbySound.play();
 }
 function playInGameMusic() {
-    ingameSound = new Audio("../Sounds/Ingamesound.mp3");
+    ingameSound = new Audio("/Sounds/Ingamesound.mp3");
     ingameSound.volume = 0.2;
 
     ingameSound.addEventListener(
@@ -103,11 +103,11 @@ function playInGameMusicStop() {
     }
 }
 function WrongAnswer() {
-    WrongAns = new Audio("../Sounds/WrongAnswersound.mp3");
+    WrongAns = new Audio("/Sounds/WrongAnswersound.mp3");
     WrongAns.play();
 }
 function CorrectAnswer() {
-    CorrectAns = new Audio("../Sounds/CorrectAnswersound.mp3");
+    CorrectAns = new Audio("/Sounds/CorrectAnswersound.mp3");
     CorrectAns.play();
 }
 window.addEventListener("DOMContentLoaded", (event) => {
@@ -212,7 +212,7 @@ switch (page) {
         }, 300);
 
         function startGame() {
-            fetch("../Data/data.json")
+            fetch("/Data/data.json")
                 .then((res) => {
                     return res.json();
                 })
